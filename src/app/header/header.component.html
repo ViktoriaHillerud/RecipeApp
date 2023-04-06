@@ -1,15 +1,14 @@
-
-<nav class="max-sm:w-32 flex justify-between gap-8 px-10 py-10 items-center bg-white flex-wrap">
-    <h1 id="h1header" class="text-4xl text-gray-800"><a routerLink="/">Chassy Recipes</a></h1>
+<nav class="max-sm:w-32 flex justify-between gap-8 px-10 py-10 pb-1 items-center bg-white flex-wrap">
+  <h1 id="h1header" class="text-4xl text-gray-800"><a routerLink="/">Chassy Recipes</a></h1>
+  <div class=" flex items-center">
     <div class=" flex items-center">
-      <div class=" flex items-center">
-      </div>
-      <div class="flex items-center space-x-6">
-   <a routerLink="/">Home</a>
-   <a routerLink="/login">Login</a>
-   <div class="container" *ngIf="userLoggedIn">
-    <button (click)="logOutUser()">Logout</button>
-   </div>
     </div>
-    </div>
-  </nav>
+    <div class="flex items-center space-x-6">
+ <a routerLink="/">Home</a>
+ <a routerLink="/login">Login</a>
+ <div class="container" *ngIf="userLoggedIn">
+  <button (click)="logOutUser()">Logout</button>
+ </div>
+  </div>
+  </div>
+</nav>

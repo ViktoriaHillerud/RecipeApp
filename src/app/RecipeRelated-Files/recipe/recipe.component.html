@@ -1,5 +1,6 @@
-<div class="m-24 my-10 flex justify-center">
-    <div class=" my-10 flex justify-center flex-col">
+<div class="m-24 my-10 flex justify-center ">
+    
+    <div class=" my-10 flex justify-center flex-col ">
 <div class="container text-center" *ngIf="userLoggedIn">
     <h1 class=" text-2xl py-3">Welcome back!</h1>
     <button class="py-2 w-36 text-white bg-orange-400 rounded-xl" [routerLink]="['/lists/']" routerLinkActive="active">Go to my Lists</button>
@@ -8,33 +9,35 @@
 </div>
 
 
-<div class="m-24 my-10 flex justify-center">
+<div class="m-24 my-10 flex justify-center text-center ">
     <h1 class="text-2xl">Filter recipes by category</h1>
 </div>
 
-<div class=" my-10 flex justify-center flex-col">
+<div class="rounded-2xl shadow-xl z-20 w-4/5 mx-4 lg:mx-48 lg:py-4">
+<div class=" my-10 flex justify-center flex-col ">
 <div class="mx-20 my-10  flex justify-center flex-wrap gap-4">
     <button class="h-10 px-5 bg-indigo-500 hover:bg-indigo-300 rounded-full text-white" (click)="getStarter()">Starters</button>
     <button class="h-10 px-5 bg-indigo-500 hover:bg-indigo-300 rounded-full text-white" (click)="getDinner()">Dinner</button>
     <button class="h-10 px-5 bg-indigo-500 hover:bg-indigo-300 rounded-full text-white" (click)="getDessert()">Dessert</button>
 </div>
 
-<div class="mx-20 my-10  flex justify-center flex-wrap gap-4">
-<button class="h-10 px-5 bg-indigo-500 hover:bg-indigo-300 rounded-full text-white" (click)="vegetarian()">Vegetarian</button>
+<div class="mx-20 my-10  flex justify-center flex-wrap gap-4 ">
+<button class=" h-10 px-5 bg-indigo-500 hover:bg-indigo-300 rounded-full text-white" (click)="vegetarian()">Vegetarian</button>
     <button class="h-10 px-5 bg-indigo-500 hover:bg-indigo-300 rounded-full text-white" (click)="vegan()">Vegan</button>
-    <button class="h-10 px-5 bg-indigo-500 hover:bg-indigo-300 rounded-full text-white" (click)="dairyFree()">Dairy free</button>
-    <button class="h-10 px-5 bg-indigo-500 hover:bg-indigo-300 rounded-full text-white" (click)="glutenFree()">Gluten free</button>
-    <button class="h-10 px-5 bg-indigo-500 hover:bg-indigo-300 rounded-full text-white" (click)="nutAllergy()">Nut allergies</button>
+    <button class="h-12 lg:h-10 px-5 bg-indigo-500 hover:bg-indigo-300 rounded-full text-white" (click)="dairyFree()">Dairy free</button>
+    <button class="h-12 lg:h-10 px-5 bg-indigo-500 hover:bg-indigo-300 rounded-full text-white" (click)="glutenFree()">Gluten free</button>
+    <button class="h-12 lg:h-10 px-5 bg-indigo-500 hover:bg-indigo-300 rounded-full text-white" (click)="nutAllergy()">Nut allergies</button>
 </div>
 </div>
 
 
-<div class="mx-20 my-10 flex-col flex justify-center flex-wrap gap-4">
+<div class="my-10 flex-col flex justify-center flex-wrap gap-4">
     <div class="lg:mx-20 flex justify-center flex-wrap gap-4">
     <h4>Search:</h4>
 <input class="border-grey border-solid border-2" type="text" [(ngModel)]="searchquery">
 </div>
 <button class="lg:mx-96 lg:w-1/7 h-10 bg-indigo-500 hover:bg-indigo-300 rounded-full text-white" type="button" (click)="getRecipes()">Get Recipes</button>
+</div>
 </div>
 
 
@@ -57,7 +60,6 @@
 </div>
 </article>
 </div>
-
 
 
 
