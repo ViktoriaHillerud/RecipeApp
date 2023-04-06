@@ -1,0 +1,33 @@
+
+<div class="bg-cover bg-[url('https://cdn.pixabay.com/photo/2015/05/04/10/16/vegetables-752153_960_720.jpg')] min-h-screen bg-purple-400 flex justify-center items-center">
+	<div class="max-sm:w-80 py-12 px-12 bg-white rounded-2xl shadow-xl z-20">
+		<div>
+			<h1 class="text-3xl font-bold text-center mb-4 cursor-pointer">Login</h1>
+			<p class="max-sm:w-5/6 text-center text-sm mb-8 font-semibold text-gray-700 tracking-wide cursor-pointer">Welcome back!</p>
+		</div>
+
+			<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+		<div class="space-y-4">
+
+			<input type="email" formControlName="email" required placeholder="Email Addres" class="block text-sm py-3 px-4 rounded-lg w-full border outline-none" />
+			<div *ngIf="err?.email">
+				{{ err?.email }}
+			</div>
+			<input type="password" formControlName="password" required placeholder="Password" class="block text-sm py-3 px-4 rounded-lg w-full border outline-none" />
+			<div *ngIf="err?.password">
+				{{ err?.password }}
+			</div>
+
+    </div>
+			<div class="text-center mt-6">
+				<button type="submit" class="py-3 w-48 md:w-80 lg:w-80 text-xl text-white bg-orange-400 rounded-2xl">Login</button>
+				<p class="mt-4 text-sm">Don't have an account? <span class="underline cursor-pointer"><a routerLink="/register"> Create account</a></span>
+				</p>
+			</div>
+		</form>
+		</div>
+		<div class="w-40 h-40 absolute bg-purple-300 rounded-full hidden md:block"></div>
+		<div
+			class="w-20 h-40 absolute bg-purple-300 rounded-full hidden md:block">
+		</div>
+	</div>

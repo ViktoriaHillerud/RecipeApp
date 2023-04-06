@@ -1,0 +1,37 @@
+<div class="my-10 flex-col flex justify-center flex-wrap gap-4">
+    <!-- <div class="lg:mx-20 flex justify-center flex-wrap gap-4"> -->
+    
+        <div  class="my-10 flex justify-center flex-wrap">
+        <h2 class="text-center w-64 font-semibold">{{recipes.label}}</h2>
+        <div *ngIf="userLoggedIn">
+            <button class="py-3 w-48 md:w-80 lg:w-80 text-l text-white bg-orange-400 rounded-2xl" (click)="addToListBtn()">Add to my lists</button>
+
+            <article *ngFor="let lists of myLists">
+                <form [formGroup]="formId" (ngSubmit)="onSubmit()">
+
+                    <select formControlName="formId" *ngFor="let lists of myLists">
+                        <option [ngValue]="lists.id">{{lists.id}}. {{lists.listTitle}}</option>
+                    </select>
+                <button type="submit">Add</button>
+            </form>
+            </article>
+        </div>
+        </div>
+    </div>
+    <div  class="lg:mx-40 my-10 flex justify-center  flex-wrap gap-8 ">
+        <div class="mx-20">
+        <img [src]="recipes.image" [alt]="recipes.label">
+        
+       <ul >
+        <li class=" my-4" *ngFor="let ingredient of recipes.ingredientLines">{{ingredient}}</li>
+       </ul>
+       
+        <p class="py-3 w-48 md:w-80 lg:w-80 text-l text-white bg-orange-400 rounded-2xl text-center"><a  href="{{recipes.url}}">Preparation steps</a></p>
+   
+        </div>
+        </div>
+   
+    
+
+
+ 

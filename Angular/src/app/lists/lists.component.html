@@ -1,0 +1,19 @@
+ <div class="container flex justify-center flex-col items-center" *ngIf="userLoggedIn">
+
+    <div class="max-sm:w-64 py-12 px-12 bg-white rounded-2xl shadow-xl z-20 flex flex-col justify-center items-center">
+        <button class="py-2 w-36 text-white bg-orange-400 rounded-xl m-4"  type="button" (click)="getLists()">My Lists</button>
+
+        <article *ngFor="let lists of myLists">
+            <h2 class="text-center w-64 font-semibold m-2"><a class="text-xl m-6 hover:bg-violet-400 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300" [routerLink]="['/lists/' + lists.id]" routerLinkActive="active">{{lists.listTitle}}</a>
+             </h2>
+         </article>
+         
+        <h1>Create a new list:</h1>
+
+        <form  class="p-6 text-center flex-col" [formGroup]="createListForm" (ngSubmit)="onSubmit()">
+         <input type="text"  formControlName="listTitle" required placeholder="List title" class="block text-sm py-3 px-4 rounded-lg w-full border outline-none" />
+         <button  type="submit">Submit</button>
+        </form>
+    </div>
+
+</div>   
