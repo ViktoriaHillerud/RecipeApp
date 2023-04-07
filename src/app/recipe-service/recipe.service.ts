@@ -43,7 +43,7 @@ export class RecipeService {
     //I need to send the recipe's Id, listTitle and preferably img columns to my backend recipeList-API...But How? 
     //Can I somehow send the parameters here in the service?
     addToList(listId: any, recipe: any){
-        return this.http.post<any>("http://127.0.0.1:8000/api/lists/" + listId, recipe).pipe(catchError(this.handleError));
+        return this.http.post<any>("https://u06-fullstack-recipe-vikhil-production.up.railway.app/api/lists/" + listId, recipe).pipe(catchError(this.handleError));
     }
   
     getDinner() {

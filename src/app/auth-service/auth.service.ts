@@ -14,7 +14,7 @@ import { User } from '../user';
 })
 export class AuthService {
 
-  configUrl = "http://127.0.0.1:8000/api/";
+  configUrl = "https://u06-fullstack-recipe-vikhil-production.up.railway.app/api/";
 
   httpOptions = {
     headers: new HttpHeaders({
